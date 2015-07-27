@@ -1,0 +1,25 @@
+<div>
+	<h1>Login</h1>
+	<div ng-repeat="formData in [{user: {name: 'Bruno'}},{user: {name: 'Lalala'}}]" style="float:left; width: 45%">
+		<form name="formData.form" novalidate ng-submit="usersCtl.checkLoginForm(formData, $index)" ng-hide="formData.form.$submitted">
+			<p>Nom: <input type="text" name="name" required ng-model="formData.user.name"><br>
+			</p>
+			<p>Email: <input type="email" name="email" ng-model="formData.user.email"><br>
+			<span class="error" ng-show="formData.form.email.$invalid">Email invalide</span>
+			</p>
+			<button type="submit">Se connecter</button>
+		</form>
+		<div ng-if="formData.form.$submitted">
+			<h1>Bonjour {{ formData.user.name }}</h1>
+			<grovatar email="usersCtl.loggedUsers[$index].email" size="200"></grovatar>
+		</div>
+	</div>
+
+	<div style="clear: both" ng-show="usersCtl.historyOfGames.length > 0">
+		<h2>Parties communes entre {{ usersCtl.loggedUsers[0].name }} et {{ usersCtl.loggedUsers[1].name }}</h2>
+		<ul>
+			<li ng-repeat="game in usersCtl.historyOfGames"><a href="#/game/{{ game.id }}">Game #{{ game.id }}</a></li>
+			<li><a ng-click="usersCtl.createGame(usersCtl.loggedUsers[0].id, usersCtl.loggedUsers[1].id)">Nouvelle partie</a></li>
+		</ul>
+	</div>
+</div>

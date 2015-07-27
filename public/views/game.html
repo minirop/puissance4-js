@@ -1,0 +1,13 @@
+<div ng-init="gameCtl.loadGame()">
+	<h2>Partie #{{ gameCtl.game_id }}</h2>
+	<p ng-hide="gameCtl.winner"><span class="pion-{{ gameCtl.currentPlayer + 1 }}"></span>A {{ gameCtl.playingUsers[gameCtl.currentPlayer].name }} de jouer.</p>
+	<table class="game">
+		<tr ng-hide="gameCtl.winner">
+			<th ng-repeat="col in [0, 1, 2, 3, 4, 5, 6]"><a ng-click="gameCtl.playInColumn(col)" ng-show="gameCtl.plateau[col][5] == 0">⇩</a></th>
+		</tr>
+		<tr ng-repeat="row in [5, 4, 3, 2, 1, 0]">
+			<td ng-repeat="col in [0, 1, 2, 3, 4, 5, 6]"><span class="pion-{{ gameCtl.plateau[col][row] }}"></span></td>
+		</tr>
+	</table>
+	<p ng-show="gameCtl.winner">{{ gameCtl.playingUsers[gameCtl.winner - 1].name }} a gagné.</p>
+</div>

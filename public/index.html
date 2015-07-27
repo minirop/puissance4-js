@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Puissance 4</title>
+
+	<script type="text/javascript" src="vendors/angular/angular.js"></script>
+	<script type="text/javascript" src="vendors/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="vendors/blueimp-md5/js/md5.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<script type="text/javascript" src="js/controllers/MainController.js"></script>
+	<script type="text/javascript" src="js/controllers/UsersController.js"></script>
+	<script type="text/javascript" src="js/controllers/GameController.js"></script>
+
+	<script type="text/javascript" src="js/services/UsersService.js"></script>
+	<script type="text/javascript" src="js/services/GamesService.js"></script>
+	
+	<script type="text/javascript" src="js/filters/bang.js"></script>
+
+	<script type="text/javascript" src="js/directives/grovatar.js"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="puissance4" ng-controller="MainController as mainCtl">
+	<h1>Puissance 4</h1>
+	<ul>
+		<li><a href="#/">index</a></li>
+	</ul>
+	<div ng-view></div>
+</body>
+</html>

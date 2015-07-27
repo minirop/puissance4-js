@@ -1,0 +1,66 @@
+.red {
+	color: red;
+}
+
+.blue {
+	color: blue;
+}
+
+.green {
+	color: green;
+}
+
+table, table tr, table tr th {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td, th {
+	border: 2px black solid;
+	padding: 2px;
+}
+
+.pion-0, .pion-1, .pion-2 {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.pion-1 {
+	background-color: gold;
+}
+.color-text-1 {
+	color: gold;
+}
+
+.pion-2 {
+	background-color: red;
+}
+.color-text-2 {
+	color: red;
+}
+
+a {
+	cursor: pointer;
+}
+
+.game th {
+	height: 25px;
+	background-color: silver;
+}
+
+grovatar {
+	display: block;
+}

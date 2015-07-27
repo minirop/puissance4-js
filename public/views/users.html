@@ -1,0 +1,20 @@
+<div ng-controller="UsersController as usersCtl">
+	<table>
+		<tr>
+			<td ng-click="usersCtl.setTableSort('name')"><span ng-show="usersCtl.tableSort == 'name'">↓</span><span ng-show="usersCtl.tableSort == '-name'">↑</span> Nom</td>
+			<td ng-click="usersCtl.setTableSort('email')"><span ng-show="usersCtl.tableSort == 'email'">↓</span><span ng-show="usersCtl.tableSort == '-email'">↑</span> Email</td>
+		</tr>
+		<tr ng-repeat="friend in usersCtl.users | orderBy:usersCtl.tableSort">
+			<td>{{ friend.name }}</td>
+			<td>{{ friend.email }}</td>
+		</tr>
+	</table>
+	<form name="newUserForm" novalidate ng-submit="usersCtl.validateNewUser(newUserForm)">
+		<p>Nom: <input type="text" name="name" ng-model="usersCtl.newuser.name" required><br>
+		</p>
+		<p>Email: <input type="email" name="email" ng-model="usersCtl.newuser.email"><br>
+		<span class="error" ng-show="newUserForm.email.$invalid">Email invalide</span>
+		</p>
+		<button type="submit">S'inscrire</button>
+	</form>
+</div>

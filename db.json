@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Bruno",
+      "email": "bruno@google.fr"
+    },
+    {
+      "id": 2,
+      "name": "John",
+      "email": "johnlennon@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Adrienne",
+      "email": "femme@rocky.us"
+    },
+    {
+      "id": 4,
+      "name": "Lalala",
+      "email": "lalala@lalala.la"
+    },
+    {
+      "name": "dfsdfdsf",
+      "id": 5
+    },
+    {
+      "name": "john",
+      "email": "azzaz@azaza.com",
+      "id": 6
+    },
+    {
+      "name": 123,
+      "email": "123@123",
+      "id": 7
+    },
+    {
+      "name": "alex",
+      "id": 12
+    },
+    {
+      "name": "lalala",
+      "id": 13
+    },
+    {
+      "name": "aaa",
+      "email": "pouet@hotmail.com",
+      "id": 14
+    },
+    {
+      "name": "azeaeaeazeazeaze",
+      "email": "azezae@azezae.com",
+      "id": 15
+    },
+    {
+      "name": "Rudolph le Caribou",
+      "email": "rudolph@gmail.com",
+      "id": 16
+    },
+    {
+      "name": "Caribou",
+      "email": "caribou@noel.com",
+      "id": 17
+    }
+  ],
+  "games": [
+    {
+      "id": 1,
+      "user1": 1,
+      "user2": 4,
+      "history": [
+        1,
+        5,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "user1": 1,
+      "user2": 4,
+      "history": [],
+      "id": 2
+    },
+    {
+      "user1": 1,
+      "user2": 4,
+      "history": [],
+      "id": 3
+    },
+    {
+      "user1": 1,
+      "user2": 4,
+      "history": [],
+      "id": 4
+    }
+  ]
+}
